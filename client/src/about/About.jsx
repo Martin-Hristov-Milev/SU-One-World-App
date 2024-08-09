@@ -4,9 +4,7 @@ export default function About (){
 
     return (
 
-        <main id="content">
-
-        {/* // <!--Testimonials--> */}
+    
         <aside id="testimonials" className="scrollto text-center" data-enllax-ratio=".2">
 
             <div className="row clearfix">
@@ -50,6 +48,6 @@ export default function About (){
 
         </aside>
 
-        </main>
+       
     )
 }
