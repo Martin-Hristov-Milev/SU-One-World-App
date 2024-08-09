@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './header/Header'
+import Footer from './footer/Footer'
 
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
   return (
     <div id="wrapper">
       <Header/>
+
+      <Footer/>
 
 
     </div>

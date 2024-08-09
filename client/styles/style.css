@@ -453,6 +453,8 @@ section {
 
 img {
     vertical-align: top;
+
+    /* display: block; */
 }
 
 .image-center {
