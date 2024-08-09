@@ -1,11 +1,11 @@
-import About from "../about/About";
+
 
 
 
 export default function Header (){
 
     return (
-        <>
+      
         
             <div id="header" className="nav-collapse">
                 <div className="row clearfix">
@@ -86,12 +86,6 @@ export default function Header (){
                     </div>
                 </div>
             </div>
-            {/* <!--End of Header--> */}
-
-             {/* <!--Banner Content--> */}
-        
-    
-
-        </>
+     
     )
 }

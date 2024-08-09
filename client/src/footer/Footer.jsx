@@ -4,7 +4,7 @@ export default function Footer (){
         <footer id="landing-footer" className="clearfix">
         <div className="row clearfix">
 
-            <p id="copyright" className="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p>
+            <p id="copyright" className="col-2">Made with love by <a href="#">ShapingRain</a></p>
 
             
             <ul className="col-2 social-icons">
