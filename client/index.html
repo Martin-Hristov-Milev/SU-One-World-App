@@ -2,12 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="shortcut icon" href="./assets/icons-logos/favicon.ico" title="Favicon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>One World</title>
+     <!-- Main CSS Files -->
+     <link rel="stylesheet" href="./styles/style.css">
+
+     <!-- Colors CSS -->
+     <link rel="stylesheet" href="./styles/colors.css">
+ 
+     <!--Icon Fonts - Font Awesome Icons-->
+     <link rel="stylesheet" href="./styles/font-awesome.min.css">
+ 
+     <!--Google Webfonts-->
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div id="root"></div>
+
+  <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+      <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+      <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+      <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+      <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+  </div>
+  
+    <div id="root">
+
     <script type="module" src="/src/main.jsx"></script>
+    </div>
+
+
+    
   </body>
 </html>
