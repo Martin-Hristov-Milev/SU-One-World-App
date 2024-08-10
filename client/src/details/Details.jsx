@@ -41,15 +41,18 @@ export default function Details(){
                     consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                     Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet!
                 </p>
-                {/*<!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->*/}
-                <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" className="button video link-lightbox">
-                    WATCH VIDEO <i className="fa fa-play" aria-hidden="true"></i>
+                <div>
+                <a href="#"  className="button video link-lightbox">
+                    EDIT
+                </a></div>
+                <a href="#"  className="button video link-lightbox">
+                    DELETE
                 </a>
             </div>
             {/*<!--End Content Right Side-->*/}
 
             <div className="col-3">
-                <img src="images/dancer.jpg" alt="Dancer"/>
+                <img src="images/dancer.jpg" alt="Nature"/>
             </div>
 
         </div>

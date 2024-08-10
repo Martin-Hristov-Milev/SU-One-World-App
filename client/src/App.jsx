@@ -12,8 +12,8 @@ function App() {
     <div id="wrapper">
       <Header/>
       {/* <Home/> */}
-      {/* <About/> */}
-      <Details/>
+      <About/>
+      {/* <Details/> */}
 
       <Footer/>
 

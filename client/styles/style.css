@@ -635,11 +635,16 @@ h6 {
 
 #services {
     background: #f3f3ef;
+    margin: 0 20px 0 20px;
     
 }
 
 /* --------- 6.3 Testimonials ---------- */
 
+#testimonials {
+    background: #f3f3ef;
+    margin: 0 20px 0 20px;
+}
 .testimonial {
     padding: 15px;
 }

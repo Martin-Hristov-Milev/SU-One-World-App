@@ -4,7 +4,7 @@ export default function About (){
 
     return (
 
-    
+        // <div id="banner-content" className="row clearfix">
         <aside id="testimonials" className="scrollto text-center" data-enllax-ratio=".2">
 
             <div className="row clearfix">
@@ -47,6 +47,7 @@ export default function About (){
             </div>
 
         </aside>
+        // </div>
 
        
     )
