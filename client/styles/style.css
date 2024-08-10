@@ -139,7 +139,13 @@ figure {
 
 /* --------- 1.1 Input Elements ---------- */
 
+label {
+    display:block;
+    margin: 1.5em 0 0.5em 0;
+}
+
 input, textarea {
+    display: block;
     border: 1px solid #e1e1e1;
     padding: 10px;
     -webkit-transition: all .3s linear;
@@ -149,14 +155,18 @@ input, textarea {
 }
 
 input {
+    display: block;
     height: 40px;
     margin: 3px 0;
     outline: none;
     line-height: normal;
     font-size: 14px;
 }
-
+ 
 input[type="submit"] {
+    height: 40px;
+    margin: 30px 0;
+    display: block;
     cursor: pointer;
     border-style: solid;
     border-width: 2px;
@@ -558,7 +568,7 @@ h6 {
     display: block;
     width: 30px;
     height: 5px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 
@@ -632,10 +642,13 @@ h6 {
     padding: 55px 0 0 0;
 }
 /* -----------------services----------- */
+/* -----------------services----------- */
+/* -----------------services----------- */
 
 #services {
     background: #f3f3ef;
     margin: 0 20px 0 20px;
+    min-height: 650px;
     
 }
 

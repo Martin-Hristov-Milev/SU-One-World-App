@@ -60,13 +60,11 @@ a:hover, #header.nav-solid nav a:hover {
     color:#999;
 }
 
-
 /* Navigation Colors when the Navigation is sticky and solid */ 
 
 #header.nav-solid, #header.nav-solid a, #header.nav-solid i, #nav-mobile ul li a {
     color:#999;
 }
-
 
 /* Navigation Active State */
 
@@ -75,12 +73,9 @@ a:hover, #header.nav-solid nav a:hover {
     border-color: #00ffbf;
 }    
 
-
-
 /*------------------------------------------------------------------------------------------*/
 /* 3. Primary and Secondary Colors */
 /*------------------------------------------------------------------------------------------*/
-
 
 /* Primary Background and Text Colors */
 
@@ -168,7 +163,6 @@ body {
   } */
 
 
-
 /* Banner Typography */
 
 #banner h1 {
@@ -189,14 +183,14 @@ body {
 
 /* Section Title and Subtitle */
 
-.section-title {
+#services .section-title {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 34px; 
     font-weight:700;
     color:#111;
 }
 
-.section-subtitle {
+#services .section-subtitle {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 16px;
     font-weight:300;

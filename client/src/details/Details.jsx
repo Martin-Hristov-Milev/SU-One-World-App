@@ -4,27 +4,24 @@ export default function Details(){
     return ( 
 
         <div id="banner-content" className="row clearfix">
-
         <div id="services" className="scrollto clearfix">
 
         <div className="row no-padding-bottom clearfix">
-
 
             {/*<!--Content Left Side-->*/}
             <div className="col-3">
                 {/*<!--User Testimonial-->*/}
                 <blockquote className="testimonial text-right bigtest">
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>— John Doe, Happy Customer</footer>
+                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua
+                        </q>
+                        <footer>— John Doe, Happy Customer</footer>
                 </blockquote>
                 {/*<!-- End of Testimonial-->*/}
 
             </div>
-            {/*<!--End Content Left Side-->*/}
-
-            {/*<!--Content of the Right Side-->*/}
+            
+            {/*<!--Content of the Midle Side-->*/}
             <div className="col-3">
                 <div className="section-heading">
                     <h3>BELIEVING</h3>
