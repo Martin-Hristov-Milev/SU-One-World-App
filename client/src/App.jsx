@@ -1,11 +1,14 @@
+import { Routes, Route, useParams } from 'react-router-dom'
 
-import Header from './header/Header'
-import Footer from './footer/Footer'
-import Home from './home/Home'
-import About from "./about/About";
-import Details from './details/Details';
-import Login from './login/Login';
-import Register from './register/Register';
+
+
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import Home from './components/home/Home'
+import About from "./components/about/About";
+import Details from './components/details/Details';
+import Login from './components/login/Login';
+import Register from './components/register/Register';
 
 
 
@@ -14,11 +17,16 @@ function App() {
   return (
     <div id="wrapper">
       <Header/>
-      {/* <Home/> */}
+      <Routes>
+        <Route  path='/' element={<Home/>} />
+        <Route  path='/login' element={<Login/>} />
+        <Route  path='/register' element={<Register/>} />
+        {/* <Route  path='/logout' element={<Logout/>} /> */}
+      </Routes>
+
       {/* <About/> */}
       {/* <Details/> */}
-      {/* <Login/> */}
-      {/* <Register/> */}
+      
 
 
 

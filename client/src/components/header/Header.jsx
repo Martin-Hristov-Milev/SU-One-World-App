@@ -1,4 +1,4 @@
-
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -11,18 +11,15 @@ export default function Header (){
                 <div className="row clearfix">
                     <div className="col-1">
 
-                        {/* <!--Logo--> */}
                         <div id="logo">
 
-                            <h1> <span>One World</span> </h1>
-                            {/* <!--End of Banner Logo--> */}
+                            <h1> <span  >One World</span> </h1>
+
+                            {/* create link !! */}
 
                         </div>
-                        {/* <!--End of Logo--> */}
-
-                        <aside>
-
-                            {/* <!--Social Icons in Header--> */}
+               
+                        <aside>                       
                             <ul className="social-icons">
                                 <li>
                                     <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
@@ -49,40 +46,38 @@ export default function Header (){
                                         <i className="fa fa-behance fa-1x"></i><span>Behance</span>
                                     </a>
                                 </li>
-                            </ul>
-                            {/* <!--End of Social Icons in Header--> */}
-
+                            </ul>     
                         </aside>
 
-                        {/* <!--Main Navigation--> */}
                         <nav id="nav-main">
                             <ul>
                                 <li>
-                                    <a href="#">Home</a>
+                                    <Link to='/'>Home</Link>
                                 </li>
                                 <li>
-                                    <a href="#">ALL Destinations</a>
+                                    <Link to="#">ALL Destinations</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Latest</a>
+                                    <Link to="#">Latest</Link>
                                 </li>
                                 <li>
-                                    <a href="#">About us</a>
+                                    <Link to="#">Create</Link>
+                                </li>
+                                <li>                              
+                                   <Link to="/register">Register</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Register</a>
+                                    <Link to="/login">Login</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Login</a>
+                                    <Link to="#">Logout</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Logout</a>
+                                   <Link to="/about">About us</Link> 
                                 </li>
                             </ul>
                         </nav>
-                        {/* <!--End of Main Navigation--> */}
-
-                    
+                       
                     </div>
                 </div>
             </div>
