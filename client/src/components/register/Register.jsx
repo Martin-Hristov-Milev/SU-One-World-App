@@ -1,4 +1,4 @@
-import{ Link } from 'react'
+import{ Link } from 'react-router-dom'
 
 
 
@@ -17,7 +17,7 @@ export default function Register(){
             <div className="col-3">
                 {/*<!--User Testimonial-->*/}
                 <blockquote className="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod    tempor incididunt ut
                             labore et dolore magna aliqua
                         </q>
                         <footer>— John Doe, Happy Customer</footer>
@@ -68,9 +68,7 @@ export default function Register(){
                  </form>
 
                 <p className="section-subtitle">
-                    <span>If you don't have profile click 
-                        {/* <span>If you already have profile click <Link to="/login">here</Link></span> */}
-                    </span>
+                    <span>If you already have profile click <Link to="/login">here</Link></span> 
                 </p>
                
             </div>

@@ -55,7 +55,7 @@ export default function Header (){
                                     <Link to='/'>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">ALL Destinations</Link>
+                                    <Link to="/all-destinations">All Destinations</Link>
                                 </li>
                                 <li>
                                     <Link to="#">Latest</Link>
@@ -75,6 +75,9 @@ export default function Header (){
                                 <li>
                                    <Link to="/about">About us</Link> 
                                 </li>
+                                {/* <li>
+                                   <Link to="/details-destination">details</Link> 
+                                </li> */}
                             </ul>
                         </nav>
                        

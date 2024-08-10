@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Login(){
 
@@ -35,7 +36,7 @@ export default function Login(){
                             <label htmlFor="email">Email:</label>
                             <input type="email" id="email" 
                                     name="email" 
-                                    placeholder="Sokka@gmail.com"
+                                    placeholder="my-email@gmail.com"
                                     // value={values.email} 
                                     // onChange={changeHandler}
                                     />
@@ -57,7 +58,7 @@ export default function Login(){
 
                 <p className="section-subtitle">
                     <span>If you don't have profile click 
-                        <a href="#"> here </a>
+                        <Link to='/register'> here </Link>
                     </span>
                 </p>
                
