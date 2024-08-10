@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useLogin }from "../../hooks/useAuth"
 import { useForm } from "../../hooks/useForm"
+
 
 export default function Login(){
 
@@ -20,7 +22,8 @@ export default function Login(){
         } catch (err){
             console.log(err.message)
             setError(err.message);
-        } };
+        }
+     };
 
 
      const {values, changeHandler, submitHandler, } = useForm(initialValues, submitCallBack)
@@ -56,29 +59,30 @@ export default function Login(){
                     <h2 className="section-title">LOGIN</h2>
                 </div>
 
-                <form id="login" 
-                // onSubmit={submitHandler}
-                >
+                <form id="login" onSubmit={submitHandler}>
+                
                    
                             <label htmlFor="email">Email:</label>
                             <input type="email" id="email" 
                                     name="email" 
                                     placeholder="my-email@gmail.com"
-                                    // value={values.email} 
-                                    // onChange={changeHandler}
+                                    value={values.email} 
+                                    onChange={changeHandler}
                                     />
 
                             <label htmlFor="login-password">Password:</label>
                             <input type="password" id="login-password" 
                                     name="password"
-                                    // value={values.password}
-                                    // onChange={changeHandler}
+                                    value={values.password}
+                                    onChange={changeHandler}
                                     />
 
                             <input type="submit" className="button link-lightbox" value="Login"/>
 
-                            {/* {error && <p style={{ color:'red', margin:'2em', textAlign: 'center', }}>
-                                <span>{error}</span></p> }; */}
+                            {error && <p style={{ color:'red', margin:'2em', textAlign: 'center', }}>
+                                         <span>{error}</span>    
+                                      </p>
+                            }
 
                   
                 </form>
