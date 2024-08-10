@@ -63,20 +63,31 @@ export default function Header (){
                                 <li>
                                     <Link to="#">Latest</Link>
                                 </li>
+                                
+                                { isAuthenticated 
+                                 ?  (<>
+                                       <li>
+                                        <Link to="/create">Create</Link>
+                                      </li>
+                                      <li>
+                                        <Link to="/logout">Logout</Link>
+                                      </li>
+                                      </>
+                                    )                                                 
+                                 :  (
+                                    <>
+                                      <li>                              
+                                          <Link to="/register">Register</Link>
+                                      </li>
+                                      <li>
+                                          <Link to="/login">Login</Link>
+                                      </li>
+                                    </>
+                                    )
+                                }
+
                                 <li>
-                                    <Link to="/create">Create</Link>
-                                </li>
-                                <li>                              
-                                   <Link to="/register">Register</Link>
-                                </li>
-                                <li>
-                                    <Link to="/login">Login</Link>
-                                </li>
-                                <li>
-                                    <Link to="#">Logout</Link>
-                                </li>
-                                <li>
-                                   <Link to="/about">About us</Link> 
+                                    <Link to="/about">About us</Link> 
                                 </li>
 
                                  { isAuthenticated 

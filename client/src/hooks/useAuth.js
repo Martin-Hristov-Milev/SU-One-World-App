@@ -26,7 +26,7 @@ export function useRegister (){
 
     const registerHandler = async (email, password ) => {
 
-        const { password: pass , ...result } = await register(email, password)
+        const { password: pass , ...result } = await register(email, password);
 
         changeAuthState(result);
         return result
@@ -34,4 +34,15 @@ export function useRegister (){
 
     return registerHandler
 
+};
+
+export function useLogout (){ 
+    const {logout: localLogaut} = useContext(authContext)
+
+            const logoutHandler = async () => {
+
+                await logout();
+                localLogaut ()
+            };
+            return logoutHandler
 };
