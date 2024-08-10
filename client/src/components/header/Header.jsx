@@ -61,7 +61,7 @@ export default function Header (){
                                     <Link to="#">Latest</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">Create</Link>
+                                    <Link to="/create">Create</Link>
                                 </li>
                                 <li>                              
                                    <Link to="/register">Register</Link>

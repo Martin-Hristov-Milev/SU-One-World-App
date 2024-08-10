@@ -10,6 +10,7 @@ import Login from './components/login/Login';
 import Register from './components/register/Register';
 import AllDestinations from './components/all-destinations/AllDestinations';
 import DetailsDestination from './components/all-destinations/details-destination/DetailsDestionation';
+import CreateDestination from './components/create-destination/CreateDestination';
 
 
 
@@ -23,6 +24,9 @@ function App() {
         <Route  path='/login' element={<Login/>} />
         <Route  path='/register' element={<Register/>} />
         <Route  path='/all-destinations' element={<AllDestinations/>} />
+        <Route  path='/create' element={<CreateDestination/>} />
+
+
         <Route  path='/details-destination' element={<DetailsDestination/>} />
 
 

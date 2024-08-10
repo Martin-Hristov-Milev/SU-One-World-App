@@ -8,7 +8,7 @@ export default function Register(){
 
     return ( 
 
-        <div id="banner-content" className="row clearfix">
+    <div id="banner-content" className="row clearfix">
         <div id="services" className="scrollto clearfix">
 
         <div className="row no-padding-bottom clearfix">
