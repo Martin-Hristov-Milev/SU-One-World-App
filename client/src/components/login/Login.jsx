@@ -1,6 +1,33 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useLogin }from "../../hooks/useAuth"
+import { useForm } from "../../hooks/useForm"
 
 export default function Login(){
+
+    const navigate = useNavigate();
+    const [error , setError]= useState('');
+    const login = useLogin();
+
+    const initialValues = { email:'', password:''};
+
+    const submitCallBack = async({email, password}) =>{ 
+        setError('')
+
+        try {
+           await login( email, password );
+           navigate ('/');
+        } catch (err){
+            console.log(err.message)
+            setError(err.message);
+        } };
+
+
+     const {values, changeHandler, submitHandler, } = useForm(initialValues, submitCallBack)
+
+        
+
+
 
     return ( 
 
