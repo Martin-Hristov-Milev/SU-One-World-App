@@ -7,5 +7,11 @@ export const create = async (destinationData) => {
     const response = await request.post(baseUrl, destinationData);
 
     return response
-
 };
+
+export const getAll = async ()=> {
+
+    const result = await request.get(baseUrl);
+
+    return Object.values(result); 
+}

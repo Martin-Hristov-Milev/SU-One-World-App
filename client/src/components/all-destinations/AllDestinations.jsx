@@ -1,8 +1,11 @@
-import ItemDestination from "./Item-destination/ItemDestination";
+import ItemDestination from "./Item-destination/ItemDestination"
+import {useGetAllDestinations} from "../../hooks/useDestinations"
 
 
 
 export default function AllDestinations(){
+
+    const [destinations, setDestinations] = useGetAllDestinations()
 
 
     return (
@@ -11,23 +14,25 @@ export default function AllDestinations(){
     <div id="services" className="scrollto clearfix">
     <section id="listing" className="text-center scrollto clearfix ">
             <div className="row clearfix">
+
                     <div className="section-heading">
                         <h3>OWE WORLD. YOUR CHOICE </h3>
                         <h2 className="section-title">We have the right destination for you</h2>
                     </div>
                  
-                    {/* <!--List ---> */}
-                    <ItemDestination/>
-                    <ItemDestination/>
-                    <ItemDestination/>
-                    <ItemDestination/>
-                    <ItemDestination/>
-                
+                    {destinations.length > 0 
+                        ? destinations.map( destination => <ItemDestination 
+                                            key={destination._id} {...destination}/> )
+                        : <h2 className="no-destinations">No destinations at the moment</h2>
+                    }
+                    
+                    
+                    
 
-                </div>
-            </section>
-            </div>
-            </div>
+             </div>
+     </section>
+     </div>
+     </div>
 
     )
 }

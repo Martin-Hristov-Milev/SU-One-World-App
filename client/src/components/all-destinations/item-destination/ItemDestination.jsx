@@ -2,28 +2,32 @@ import { Link } from "react-router-dom";
 
 
 
-export default function ItemDestination(){
+export default function ItemDestination( { 
+    
+                        location,
+                        journey,
+                        budget,
+                        imageUrl ,
+                        _id,
+                    }   
+){
 
-    return(
+ return(
 
         <div className="list-block col-3 wow fadeInUp" data-wow-delay="0.4s">
 
-                 <div className="list-block-content">
+                <div className="list-block-content">
                             <div className="listing">
-                                <div className="list">
-                                <img src="/images/logo-2.png" alt=""/>
-                                </div>
-                                
-                                
+                                <img src={imageUrl} alt="Destination Image"/>
+
+                            {/* <div className="list"></div> */}
+   
                             </div>
-                            <h3>Country</h3>
-                            <p>Description
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit cupiditate facilis expedita quaerat 
-                            </p>
-                            
-                        
-                            
-                            <Link to="/details-destination" className="button">DETAILS</Link>
+                            <h3>{location}</h3>
+                            <p> Journey: {journey}</p>
+                            <p> Estimated budget: {budget}$ </p>
+                                                     
+                            <Link to={`/all-destinations/${_id}`}  className="button">DETAILS</Link>
                  </div>
           </div>
 
