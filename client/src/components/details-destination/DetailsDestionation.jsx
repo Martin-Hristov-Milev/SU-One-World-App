@@ -1,12 +1,19 @@
 import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import {useGetOneDestination} from '../../hooks/useDestinations'
+import { authContext } from "../../contexts/authContext";
 
 
 export default function DetailsDestination(){
 
     const {destinationId } = useParams(); 
     const [destination, setDestination] = useGetOneDestination(destinationId);
+
+    const { userId, email } = useContext(authContext);
+
+//  comments ----------------
+
+    const isOwner = userId === destination._ownerId;
 
     return ( 
 
@@ -36,16 +43,21 @@ export default function DetailsDestination(){
                     <p>Journey : {destination.journey}</p>
                     <p>Budget in USD : {destination.budget}</p>
                     
-                    <p>
-                    {destination.description}
-                    </p>
+                    <p>{destination.description}</p>
                     
-                    <a href="#"  className="button link-lightbox">
-                        EDIT
-                    </a>
-                    <a href="#"  className="button link-lightbox">
-                        DELETE
-                    </a>
+                    
+                    {isOwner && (
+                        <>
+                        <Link to={ `/all-destinations/${destinationId}/edit` } className="button"
+                        >EDIT</Link>
+
+                        <Link to='/all-destinations' 
+                        // onClick={deleteHandler} 
+                        className="button"
+                        >DELETE</Link>
+                        </>
+                    )}
+                   
 
                     <div >
                     <h4>COMMENTS:</h4>

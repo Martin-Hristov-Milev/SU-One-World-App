@@ -20,3 +20,15 @@ export const getOne = async ( destinationId )=> {
     const result = await request.get( `${baseUrl}/${destinationId}`);
     return result
 };
+
+export const update = async (destinationId, destinationData) => {
+
+    const response = await request.put(`${baseUrl}/${destinationId}`, destinationData);
+    return response
+};
+
+export const remove = async (destinationId) => {
+
+    const response = await request.del(`${baseUrl}/${destinationId}`);
+    return response
+};
