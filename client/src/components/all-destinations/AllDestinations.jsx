@@ -16,7 +16,7 @@ export default function AllDestinations(){
                         <h2 className="section-title">We have the right destination for you</h2>
                     </div>
                  
-                    {/* <!--List Block--> */}
+                    {/* <!--List ---> */}
                     <ItemDestination/>
                     <ItemDestination/>
                     <ItemDestination/>
