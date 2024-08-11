@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import {useGetOneDestination} from '../../hooks/useDestinations'
 import { authContext } from "../../contexts/authContext";
+import { remove } from "../../services-api/destination-API";
 
 
 export default function DetailsDestination(){
@@ -12,6 +13,18 @@ export default function DetailsDestination(){
     const { userId, email } = useContext(authContext);
 
 //  comments ----------------
+
+
+    const deleteHandler = async ()=> {
+        const isConfirmed = confirm( `Are you sure you want to delete the destination to ${destination.location} ?`)   
+        if(!isConfirmed) { return }
+
+            try{  
+            const result = await remove(destinationId);  
+            //  navigete here or.. via Link? // error msg? 
+            }catch(err){ 
+            console.log (err)}
+        };
 
     const isOwner = userId === destination._ownerId;
 
@@ -52,7 +65,7 @@ export default function DetailsDestination(){
                         >EDIT</Link>
 
                         <Link to='/all-destinations' 
-                        // onClick={deleteHandler} 
+                        onClick={deleteHandler} 
                         className="button"
                         >DELETE</Link>
                         </>

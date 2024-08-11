@@ -29,7 +29,7 @@ export default function EditDestination(){
         if(isConfirmed) {
 
             const updatedDestination = await update(destinationId, values);
-             navigate(`/all-destinations/${destinationId}/details/details`);                      
+             navigate(`/all-destinations/${destinationId}/details`);  
         }
     }; 
 
@@ -66,8 +66,8 @@ export default function EditDestination(){
             {/*<!--Content of the Middle -->*/}
             <div className="col-3">
                 <div className=" section-heading">
-                    <h3>THE JOURNEY STARTS HERE </h3>
-                    <h2 className="section-title">CREATE NEW DESTINATION</h2>
+                    <h3>THIS ADVENTURE IS GETTING BETTER </h3>
+                    <h2 className="section-title">EDIT DESTINATION</h2>
                 </div>
 
                 <form id="create" 
@@ -124,7 +124,7 @@ export default function EditDestination(){
                         placeholder="How much did you spend.."
                     />
 
-                    <input className="button " type="submit" value="CREATE " />
+                    <input className="button " type="submit" value="UPDATE" />
 
                     {/* {error && <p style={{ color:'red', margin:'3em 0 3em 0' }}><span> Issue : {error}</span></p> } */}
                     

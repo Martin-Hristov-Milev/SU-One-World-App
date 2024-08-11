@@ -12,6 +12,7 @@ import AllDestinations from './components/all-destinations/AllDestinations';
 import DetailsDestination from './components/details-destination/DetailsDestionation'
 import CreateDestination from './components/create-destination/CreateDestination'
 import Logout from './components/logout/Logout';
+import EditDestination from './components/edit-destination/EditDestination';
 
 
 
@@ -31,7 +32,10 @@ function App() {
           <Route  path='/create' element={<CreateDestination/>} />
 
 
-          <Route  path='/all-destinations/:destinationId/details' element={<DetailsDestination/>} />
+          <Route  path='/all-destinations/:destinationId/details' 
+                  element={<DetailsDestination/>} />
+          <Route  path='/all-destinations/:destinationId/edit' 
+                  element={<EditDestination/>} />
 
           <Route  path='/logout' element={<Logout/>} />
           
