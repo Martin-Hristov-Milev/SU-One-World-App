@@ -1,19 +1,49 @@
 import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
+
 import {useGetOneDestination} from '../../hooks/useDestinations'
 import { authContext } from "../../contexts/authContext";
 import { remove } from "../../services-api/destination-API";
+import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
+import { useForm } from "../../hooks/useForm";
 
+
+
+const initialValues = { comment: ''};
 
 export default function DetailsDestination(){
+
+    const [error , setError]= useState('');
 
     const {destinationId } = useParams(); 
     const [destination, setDestination] = useGetOneDestination(destinationId);
 
     const { userId, email } = useContext(authContext);
 
-//  comments ----------------
+//  ----------------comments ----------------
 
+    const createComment = useCreateComment();
+
+    const [comments, setComments]= useGetAllComments(destinationId);
+
+
+    const submitCallBack = async (values)=>{  
+        try{
+            const newComment = await createComment(destinationId, values.comment );
+
+             setComments( old => [...old, {...newComment, author: {email} }])
+        
+        }catch(err){
+            // error measage or empty comments validation
+            console.log(err.message)
+            setError(err.message)
+        }
+     }; 
+
+    const {values, changeHandler, submitHandler,} = useForm(initialValues, submitCallBack);
+
+
+// ------------------delete------------------
 
     const deleteHandler = async ()=> {
         const isConfirmed = confirm( `Are you sure you want to delete the destination to ${destination.location} ?`)   
@@ -75,42 +105,41 @@ export default function DetailsDestination(){
                     <div >
                     <h4>COMMENTS:</h4>
                          <ul> 
-                            <li>
-                                <p>user: comment one </p>
-                            </li>
-                            <li>
-                                <p>user: comment one </p>
-                            </li>
-                                {/* {comments.map( ({_id, author, text}) => (
+                             {comments.map( ({_id, author, text}) => (
 
-                                    <li key={_id} className="comment" >
-                                        <p>{author.email}: {text}</p>
-                                    </li>
-                                ) )
-                                } */}
+                                 <li key={_id} className="comment" >
+                                     <p>{author.email}: {text}</p>
+                                 </li>
+                                ) 
+                              )}
                          </ul>
-                            {/* {comments.length === 0 && (
-                                <p className="no-comment">No comment.</p>
-                                )} */}
+                            {comments.length === 0 && (
+                                <p >No comments.</p>
+                                )}
                     </div> 
                     <article >
-                      <label>Add new comment:</label>
+                        <label>Add new comment:</label>
 
-                    <form 
-                    // onSubmit={submitHandler}
-                    >
+                        <form onSubmit={submitHandler}>
+                    
+                        {/* <input type= 'text' name='username' placeholder="username..."/> */}
 
-                    {/* <input type= 'text' name='username' placeholder="username..."  /> */}
+                        <textarea 
+                            name="comment" 
+                            placeholder="Tell us what you think ....."
+                            onChange = {changeHandler}
+                            value = {values.comment}
+                        ></textarea>
 
-                    <textarea 
-                        name="comment" 
-                        placeholder="Tell us what you think ....."
-                        // onChange = {changeHandler}
-                        // value = {values.comment}
-                    ></textarea>
+                        {error && <p style={{ color:'red', margin:'2em 0 2em 0'}}>
+                         <span>{error}</span>    
+                         </p>
+                        }
 
-                    <input className="button submit" type="submit" value="Add Comment"/>
-                    </form>
+                        <input className="button submit" 
+                               type="submit" 
+                               value="Add Comment"/>
+                        </form>
                     </article>
 
                 </div>

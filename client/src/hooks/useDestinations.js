@@ -3,7 +3,7 @@ import {getAll, getOne} from '../services-api/destination-API'
 
 export function useGetAllDestinations (){
     
-    const [ destinations , setDestinations ]= useState([]);
+    const [ destinations , setDestinations ] = useState([]);
     
     useEffect(() => {
         ( async ()=> {
