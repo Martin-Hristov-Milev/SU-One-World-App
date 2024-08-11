@@ -1,5 +1,12 @@
+import { useContext, useEffect, useState } from "react"
+import { Link, useParams } from "react-router-dom"
+import {useGetOneDestination} from '../../hooks/useDestinations'
+
 
 export default function DetailsDestination(){
+
+    const {destinationId } = useParams(); 
+    const [destination, setDestination] = useGetOneDestination(destinationId);
 
     return ( 
 
@@ -23,15 +30,14 @@ export default function DetailsDestination(){
                 <div className="col-3">
                     <div className="section-heading">
                         <h3>BELIEVING</h3>
-                        <h2 className="section-title"> Location , like City and Country</h2>
+                        <h2 className="section-title"> {destination.location}</h2>
                         
                     </div>
-                    <p>Budget in USD
-                    </p>
+                    <p>Journey : {destination.journey}</p>
+                    <p>Budget in USD : {destination.budget}</p>
+                    
                     <p>
-                        Detailed description: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet!
+                    {destination.description}
                     </p>
                     
                     <a href="#"  className="button link-lightbox">
@@ -86,7 +92,7 @@ export default function DetailsDestination(){
                 {/*<!--End Content Right Side-->*/}
 
                 <div className="col-3">
-                    <img src="images/dancer.jpg" alt="Nature"/>
+                    <img src={destination.imageUrl} alt="Image"/>
                 </div>
 
             </div>

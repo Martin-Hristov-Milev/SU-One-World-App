@@ -9,7 +9,7 @@ import About from "./components/about/About";
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import AllDestinations from './components/all-destinations/AllDestinations';
-import DetailsDestination from './components/all-destinations/details-destination/DetailsDestionation'
+import DetailsDestination from './components/details-destination/DetailsDestionation'
 import CreateDestination from './components/create-destination/CreateDestination'
 import Logout from './components/logout/Logout';
 
@@ -31,7 +31,7 @@ function App() {
           <Route  path='/create' element={<CreateDestination/>} />
 
 
-          <Route  path='/details-destination' element={<DetailsDestination/>} />
+          <Route  path='/all-destinations/:destinationId/details' element={<DetailsDestination/>} />
 
           <Route  path='/logout' element={<Logout/>} />
           

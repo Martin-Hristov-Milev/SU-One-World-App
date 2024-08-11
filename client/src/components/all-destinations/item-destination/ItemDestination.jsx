@@ -27,7 +27,7 @@ export default function ItemDestination( {
                             <p> Journey: {journey}</p>
                             <p> Estimated budget: {budget}$ </p>
                                                      
-                            <Link to={`/all-destinations/${_id}`}  className="button">DETAILS</Link>
+                            <Link to={`/all-destinations/${_id}/details`}  className="button">DETAILS</Link>
                  </div>
           </div>
 
