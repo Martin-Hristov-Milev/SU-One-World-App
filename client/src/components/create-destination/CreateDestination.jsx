@@ -29,7 +29,7 @@ export default function CreateDestination(){
 
            const { _id: destinationId} = result;
 
-           navigate(`/all-destinations/${destinationId}`)   
+           navigate(`/all-destinations/${destinationId}/details`)   
 
         }catch( err )
           { console.log(err)
