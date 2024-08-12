@@ -9,6 +9,7 @@ import { createContext, useState } from "react";
                 changeAuthState: (authState)=> null,
                 logout: ()=> null,
             };
+localStorage.setItem('accessToken', '')
 
 export const authContext = createContext(initialContext);
 

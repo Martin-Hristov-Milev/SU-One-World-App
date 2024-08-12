@@ -58,10 +58,10 @@ export default function Header (){
                                     <Link to='/'>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="/all-destinations">All Destinations</Link>
+                                    <Link to="/latest">Latest</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">Latest</Link>
+                                    <Link to="/all-destinations">All Destinations</Link>
                                 </li>
                                 
                                 { isAuthenticated 

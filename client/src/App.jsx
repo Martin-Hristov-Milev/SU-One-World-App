@@ -14,6 +14,7 @@ import CreateDestination from './components/create-destination/CreateDestination
 import Logout from './components/logout/Logout';
 import EditDestination from './components/edit-destination/EditDestination';
 import RouteGuard from './common/RouteGuard';
+import Latest from './components/latest/Latest';
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Header/>
         <Routes>
           <Route  path='/' element={<Home/>} />
+          <Route  path='/latest' element={<Latest/>} />
           <Route  path='/all-destinations' 
                   element={<AllDestinations/>} />
           <Route  path='/all-destinations/:destinationId/details' 

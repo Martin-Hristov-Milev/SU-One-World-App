@@ -32,3 +32,17 @@ export const remove = async (destinationId) => {
     const response = await request.del(`${baseUrl}/${destinationId}`);
     return response
 };
+
+export const getLatest = async () => {
+
+    const params = encodeURIComponent('sortBy=_createdOn desc')
+    //     sortBy: `_createdOn desc`,
+    //     pageSize: 5,
+    // })
+
+    const response = await request.get(`${baseUrl}?${params}`);
+    return response
+};
+// ${params.toString()}
+// ?sortBy=_createdOn%20desc
+// (unencoded) /data/recipes?sortBy=_createdOn desc

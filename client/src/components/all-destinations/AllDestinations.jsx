@@ -5,8 +5,7 @@ import {useGetAllDestinations} from "../../hooks/useDestinations"
 
 export default function AllDestinations(){
 
-    const [destinations, setDestinations] = useGetAllDestinations()
-
+    const [destinations, setDestinations] = useGetAllDestinations();
 
     return (
 
@@ -25,10 +24,7 @@ export default function AllDestinations(){
                                             key={destination._id} {...destination}/> )
                         : <h2 className="no-destinations">No destinations at the moment</h2>
                     }
-                    
-                    
-                    
-
+        
              </div>
      </section>
      </div>
