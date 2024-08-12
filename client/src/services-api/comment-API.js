@@ -16,8 +16,7 @@ export const getAll = async (destinationId)=>{
        load: `author=_ownerId:users`
     });
 
-const result = await request.get(`${url}?${params.toString()}` )
-
-return result
-}
+    const result = await request.get(`${url}?${params.toString()}` )
+    return result
+};
 

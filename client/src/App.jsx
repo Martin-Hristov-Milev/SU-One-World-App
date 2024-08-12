@@ -13,6 +13,7 @@ import DetailsDestination from './components/details-destination/DetailsDestiona
 import CreateDestination from './components/create-destination/CreateDestination'
 import Logout from './components/logout/Logout';
 import EditDestination from './components/edit-destination/EditDestination';
+import RouteGuard from './common/RouteGuard';
 
 
 
@@ -26,25 +27,24 @@ function App() {
       <Header/>
         <Routes>
           <Route  path='/' element={<Home/>} />
-          <Route  path='/login' element={<Login/>} />
-          <Route  path='/register' element={<Register/>} />
-          <Route  path='/all-destinations' element={<AllDestinations/>} />
-          <Route  path='/create' element={<CreateDestination/>} />
-
-
+          <Route  path='/all-destinations' 
+                  element={<AllDestinations/>} />
           <Route  path='/all-destinations/:destinationId/details' 
                   element={<DetailsDestination/>} />
-          <Route  path='/all-destinations/:destinationId/edit' 
-                  element={<EditDestination/>} />
-
-          <Route  path='/logout' element={<Logout/>} />
+          <Route  path='/register' element={<Register/>} />
+          <Route  path='/login' element={<Login/>} />
           
+          <Route element={<RouteGuard/>}>
+              <Route  path='/logout' element={<Logout/>} />
+              <Route  path='/all-destinations/:destinationId/edit' 
+                      element={<EditDestination/>} />
+              <Route  path='/create' element={<CreateDestination/>}/>
+          </Route>         
         </Routes>
 
         {/* <About/> */}
      
-      <Footer/>
-      
+      <Footer/>     
     </div>
     </AuthContextProvider>
   )

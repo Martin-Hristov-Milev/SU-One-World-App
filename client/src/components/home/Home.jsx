@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Home (){
 
@@ -14,7 +15,7 @@ export default function Home (){
                         personal and commercial projects, enjoy!</h2>
                 </div>
 
-                <a href="#" className="button">START DISCOVERING TODAY</a>
+                <Link to='/all-destinations' className="button">START DISCOVERING TODAY</Link>
   
             </div>
 
