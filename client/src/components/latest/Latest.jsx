@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { getLatest } from "../../services-api/destination-API";
-import LatestItem from "./latest-item/LatestItem";
+import SmallItem from "./small-item/SmallItem";
 
 
 
@@ -38,7 +38,7 @@ export default function Latest(){
                 <div className="section-heading">
                     <h1>LATEST DESTINATIONS</h1>
                    {latest.length > 0 
-                        ? latest.map( destination => <LatestItem 
+                        ? latest.map( destination => <SmallItem 
                                             key={destination._id} {...destination}/> )
                         : <h2 className="no-destinations">No destinations at the moment</h2>
                     }

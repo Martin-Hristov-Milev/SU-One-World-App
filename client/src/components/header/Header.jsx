@@ -15,15 +15,15 @@ export default function Header (){
       
         
             <div id="header" className="nav-collapse">
-                <div className="row clearfix">
-                    <div className="col-1">
+            <div className="row clearfix">
+            <div className="col-1">
 
-                        <div id="logo">
-                            <h1> <span  >One World</span> </h1>
-                            {/* create link !! */}
-                        </div>            
-                        <aside>                       
-                            <ul className="social-icons">
+                  <div id="logo">
+                      <h1> <span  >One World</span> </h1>
+                      {/* create link !! */}
+                  </div>            
+                  <aside>                       
+                      <ul className="social-icons">
                                 <li>
                                     <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
                                         <i className="fa fa-facebook fa-1x"></i><span>Facebook</span>
@@ -49,11 +49,11 @@ export default function Header (){
                                         <i className="fa fa-behance fa-1x"></i><span>Behance</span>
                                     </a>
                                 </li>
-                            </ul>     
-                        </aside>
+                      </ul>     
+                  </aside>
 
-                        <nav id="nav-main">
-                            <ul>
+                  <nav id="nav-main">
+                    <ul>
                                 <li>
                                     <Link to='/'>Home</Link>
                                 </li>
@@ -72,6 +72,11 @@ export default function Header (){
                                       <li>
                                         <Link to="/logout">Logout</Link>
                                       </li>
+
+                                      <li style={{color: "white"}}>
+                                        <Link to="/profile">Hello {email}</Link>
+                                      </li> 
+
                                       </>
                                     )                                                 
                                  :  (
@@ -86,22 +91,13 @@ export default function Header (){
                                     )
                                 }
 
-                                <li>
-                                    <Link to="/about">About us</Link> 
-                                </li>
+                                
 
-                                 { isAuthenticated 
-                                 ? <li style={{color: "white"}}>Hello {email}</li> 
-                                 : null
-                                 }  
-                                {/* <li>
-                                   <Link to="/details-destination">details</Link> 
-                                </li> */}
-                            </ul>
-
+                                
                                
-            
-                        </nav>
+                    </ul>
+          
+                  </nav>
                        
                     </div>
                 </div>

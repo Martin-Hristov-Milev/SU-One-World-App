@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {getAll, getOne} from '../services-api/destination-API'
+import {getAll, getByOwner, getOne} from '../services-api/destination-API'
 
 export function useGetAllDestinations (){
     
@@ -26,6 +26,21 @@ export function useGetOneDestination(destinationId){
             
         })();
     },[destinationId]);
+    
+    return [destination, setDestination]
+};
+
+export function useGetOwnerDestination(ownerId){
+
+    const[destination, setDestination] = useState([]);
+
+    useEffect(() => {
+        ( async ()=> {
+            const result = await getByOwner(ownerId);
+            setDestination(result)
+            
+        })();
+    },[ownerId]);
     
     return [destination, setDestination]
 };

@@ -13,6 +13,7 @@ import DetailsDestination from './components/details-destination/DetailsDestiona
 import CreateDestination from './components/create-destination/CreateDestination'
 import Logout from './components/logout/Logout';
 import EditDestination from './components/edit-destination/EditDestination';
+import Profile from './components/profile/Profile';
 import RouteGuard from './common/RouteGuard';
 import Latest from './components/latest/Latest';
 
@@ -38,6 +39,7 @@ function App() {
           
           <Route element={<RouteGuard/>}>
               <Route  path='/logout' element={<Logout/>} />
+              <Route  path='/profile' element={<Profile/>} />
               <Route  path='/all-destinations/:destinationId/edit' 
                       element={<EditDestination/>} />
               <Route  path='/create' element={<CreateDestination/>}/>

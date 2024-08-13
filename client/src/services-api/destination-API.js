@@ -35,14 +35,22 @@ export const remove = async (destinationId) => {
 
 export const getLatest = async () => {
 
-    const params = encodeURIComponent('sortBy=_createdOn desc')
-    //     sortBy: `_createdOn desc`,
-    //     pageSize: 5,
-    // })
+    
 
-    const response = await request.get(`${baseUrl}?${params}`);
+    const response = await request.get(`${baseUrl}?sortBy=_createdOn desc&offset=0&pageSize=3`);
+   
     return response
+
+    
 };
-// ${params.toString()}
-// ?sortBy=_createdOn%20desc
-// (unencoded) /data/recipes?sortBy=_createdOn desc
+export const getByOwner = async (ownerId) => {
+
+    const params = encodeURIComponent(`="${ownerId}"`)
+    
+
+    const response = await request.get(`${baseUrl}?where=_ownerId${params}`);
+    
+    return response
+
+    
+};
