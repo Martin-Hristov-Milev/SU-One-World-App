@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {getAll, getByOwner, getOne} from '../services-api/destination-API'
+import {getAll, getByOwner, getLatest, getOne} from '../services-api/destination-API'
 
 export function useGetAllDestinations (){
     
@@ -43,4 +43,19 @@ export function useGetOwnerDestination(ownerId){
     },[ownerId]);
     
     return [destination, setDestination]
+};
+
+export function getLatestDestinations(){
+
+    const [latest , setLates] = useState([]);
+   
+    useEffect(()=> {
+       ( async()=>{
+           const result = await getLatest();
+   
+           setLates(result)
+       })();        
+    }, []);
+
+    return latest
 };
