@@ -18,7 +18,7 @@ import { getLatestDestinations } from "../../hooks/useDestinations"
                     <h1>LATEST DESTINATIONS</h1>
                    {latest.length > 0 
                         ? latest.map( destination => <SmallItem 
-                                            key={destination._id} {...destination}/> )
+                                      key={destination._id} {...destination}/> )
                         : <h2 className="no-destinations">No destinations at the moment</h2>
                     }
                  

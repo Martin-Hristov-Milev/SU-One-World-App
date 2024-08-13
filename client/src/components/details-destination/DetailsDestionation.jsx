@@ -28,10 +28,15 @@ export default function DetailsDestination(){
 
 
     const submitCallBack = async (values)=>{  
+        setError('');
         try{
+            if(!values.comment){
+                setError('No Content')
+                return 
+            }
             const newComment = await createComment(destinationId, values.comment );
 
-             setComments( old => [...old, {...newComment, author: {email} }])
+            setComments( old => [...old, {...newComment, author: {email} }])
         
         }catch(err){
             // error measage or empty comments validation
