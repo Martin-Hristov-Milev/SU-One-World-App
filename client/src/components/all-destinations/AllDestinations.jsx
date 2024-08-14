@@ -14,7 +14,7 @@ export default function AllDestinations(){
     <section id="listing" className="text-center scrollto clearfix ">
             
                     <div className="section-heading">
-                        <h3>OWE WORLD. YOUR CHOICE </h3>
+                        <h3>LIFE IS SHORT AND THE WORLD IS WIDE </h3>
                         <h2 className="section-title">We have the right destination for you</h2>
                     </div>
                  

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import  styles  from './ItemDestination.module.css'
 
 
 
@@ -13,7 +14,7 @@ export default function ItemDestination( {
     return(
         <div className="list-block col-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div className="list-block-content">
-                            <div className="listing">
+                            <div className={styles.img}>
                                 <img src={imageUrl} alt="Destination Image"/>
                             {/* <div className="list"></div> */}
                             </div>

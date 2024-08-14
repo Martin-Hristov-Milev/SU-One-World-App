@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
+import styles from "./DetailsDestination.module.css"
 
 import {useGetOneDestination} from '../../hooks/useDestinations'
 import { authContext } from "../../contexts/authContext";
@@ -73,24 +74,22 @@ export default function DetailsDestination(){
                 {/*<!--Content Left Side-->*/}
                 <div className="col-3">
                     <blockquote className="testimonial text-right bigtest">
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua
-                            </q>
-                            <footer>— John Doe, Happy Customer</footer>
+                            <footer> Description:  </footer>
+                            <q>{destination.description}</q>
+                            
                     </blockquote>
                 </div>
                 
                 {/*<!--Content of the Midle Side-->*/}
                 <div className="col-3">
                     <div className="section-heading">
-                        <h3>BELIEVING</h3>
+                        <h3 className={styles.journey}>Type of journey: {destination.journey}</h3>
                         <h2 className="section-title"> {destination.location}</h2>
                         
                     </div>
-                    <p>Journey : {destination.journey}</p>
                     <p>Budget in USD : {destination.budget}</p>
                     
-                    <p>{destination.description}</p>
+                    <p></p>
                     
                     
                     {isOwner && (
@@ -107,8 +106,8 @@ export default function DetailsDestination(){
                    
 
                     <div >
-                    <h4>COMMENTS:</h4>
-                         <ul> 
+                    <h4>COMMENTS AND QUESTIONS:</h4>
+                         <ul className={styles.comments}> 
                              {comments.map( ({_id, author, text}) => (
 
                                  <li key={_id} className="comment" >
@@ -126,9 +125,8 @@ export default function DetailsDestination(){
 
                         <form onSubmit={submitHandler}>
                     
-                        {/* <input type= 'text' name='username' placeholder="username..."/> */}
-
                         <textarea 
+                            rows="3" cols="44"
                             name="comment" 
                             placeholder="Tell us what you think ....."
                             onChange = {changeHandler}
@@ -150,7 +148,7 @@ export default function DetailsDestination(){
                 {/*<!--End Content Right Side-->*/}
 
                 <div className="col-3">
-                    <img src={destination.imageUrl} alt="Image"/>
+                    <img className={styles.img}src={destination.imageUrl} alt="Image"/>
                 </div>
 
             </div>

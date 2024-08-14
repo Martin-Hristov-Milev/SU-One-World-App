@@ -1,0 +1,14 @@
+.img {
+ padding: 0 2em 0 0;
+ 
+}
+.comments {
+  list-style-type: none;   
+}
+
+.comments li {
+
+    background-color: rgb(255, 254, 252);
+    padding-left: 4px;
+    
+}

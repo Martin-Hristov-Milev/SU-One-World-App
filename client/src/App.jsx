@@ -9,7 +9,7 @@ import About from "./components/about/About";
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import AllDestinations from './components/all-destinations/AllDestinations';
-import DetailsDestination from './components/details-destination/DetailsDestionation'
+import DetailsDestination from './components/details-destination/DetailsDestination'
 import CreateDestination from './components/create-destination/CreateDestination'
 import Logout from './components/logout/Logout';
 import EditDestination from './components/edit-destination/EditDestination';
