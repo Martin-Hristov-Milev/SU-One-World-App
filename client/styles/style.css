@@ -3,33 +3,6 @@
 @import "../styles/font-awesome.min.css";
 
 
-/* 
-1. Default and Reset styles
-- 1.1 Input Elements
-2. Global elements
-- 2.1 Header
-- 2.2 Logo
-- 2.3 Buttons
-- 2.4 Navigation
-- 2.5 Social Elements
-- 2.6 Images
-3. Fonts and Headings
-4. Banner
-- 4.1 SignUp Form
-5. Content Elements
-- 5.1 Icons
-- 5.2 Parallax Elements
-- 5.3 Divider
-6. Landing Page Sections
-- 6.1 Features
-- 6.2 Testimonials
-- 6.3 Gallery
-- 6.4 Video
-- 6.5 Clients
-- 6.6 listing Table
-7. Footer */
-
-
 /* 1. Defaults & Reset of specific styles across browsers */
 
 
@@ -46,6 +19,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote
 }
 
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -478,7 +452,7 @@ a img {
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    /* -webkit-backface-visibility: hidden; */
+    
 }
 
 a img:hover {
@@ -641,9 +615,6 @@ h6 {
 .introduction img.featured {
     padding: 55px 0 0 0;
 }
-/* -----------------services----------- */
-/* -----------------services----------- */
-/* -----------------services----------- */
 
 #services {
     background: #f3f3ef;

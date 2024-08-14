@@ -74,7 +74,7 @@ export default function Header (){
                                       </li>
 
                                       <li style={{color: "white"}}>
-                                        <Link to="/profile">Hello {email}</Link>
+                                        <Link to="/profile">your page {email}</Link>
                                       </li> 
 
                                       </>

@@ -12,9 +12,10 @@ export default function LatestItem( {
                     }   
 ){
     return(
-        <div className="list-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-                <div className="list-block-content">
-                        <Link to={`/all-destinations/${_id}/details`} >
+        <div className="list-block col-3" >
+                <div  className="list-block-content">
+
+                        <Link to={`/all-destinations/${_id}/details`} className={styles.block}>
                             <div className="">
                             
                                 <img className={styles.img}src={imageUrl} alt="Destination Image"/>
@@ -22,9 +23,9 @@ export default function LatestItem( {
                             </div>
                             <h3>{location}</h3>
                         
-                            <p>{budget}$</p>
                             </Link>
                                                      
+                            {/* <p>{budget}$</p> */}
                             {/* <Link to={`/all-destinations/${_id}/details`}  className="button">DETAILS</Link> */}
                  </div>
           </div>

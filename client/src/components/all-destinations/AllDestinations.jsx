@@ -13,7 +13,7 @@ export default function AllDestinations(){
     <div id="services" className="scrollto clearfix">
     <section id="listing" className="text-center scrollto clearfix ">
             
-                    <div className="section-heading">
+                    <div className="section-heading text-center">
                         <h3>LIFE IS SHORT AND THE WORLD IS WIDE </h3>
                         <h2 className="section-title">We have the right destination for you</h2>
                     </div>

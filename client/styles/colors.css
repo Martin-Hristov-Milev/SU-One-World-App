@@ -1,15 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* 
-1. Website Default Styling
-2. Navigation
-3. Primary and Secondary Colors
-4. Banner
-5. Typography
-6. Buttons
-7. Footer 
-*/
 
 
 /*------------------------------------------------------------------------------------------*/
@@ -18,7 +9,9 @@
 
 
 body {
-    background:#fff;
+    /* background:#fff; */
+    background: url("../assets/banner-images/1st-section.jpg") no-repeat center top;
+    background-size:  cover
 }
 
 
@@ -42,6 +35,10 @@ a:hover, #header.nav-solid nav a:hover {
 
 #banner .section-heading:before, .testimonial.classic footer:before {
     background: #00ffbf;
+}
+#services>#listing>.section-heading:before {
+    background: #00ffbf;
+    margin: 20px auto;
 }
 
 .list-block-content:hover {
@@ -122,8 +119,8 @@ a:hover, #header.nav-solid nav a:hover {
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("../assets/banner-images/1st-section.jpg") no-repeat center top;
-    background-size:cover;
+    /* background: url("../assets/banner-images/1st-section.jpg") no-repeat center top;
+    background-size:cover; */
 }
 
 
