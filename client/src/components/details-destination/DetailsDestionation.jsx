@@ -68,7 +68,7 @@ export default function DetailsDestination(){
     <div id="banner-content" className="row clearfix">
         <div id="services" className="scrollto clearfix">
 
-            <div className="row no-padding-bottom clearfix">
+            <div className="row no-padding-bottom clearfix"> 
 
                 {/*<!--Content Left Side-->*/}
                 <div className="col-3">
@@ -78,7 +78,6 @@ export default function DetailsDestination(){
                             </q>
                             <footer>— John Doe, Happy Customer</footer>
                     </blockquote>
-
                 </div>
                 
                 {/*<!--Content of the Midle Side-->*/}

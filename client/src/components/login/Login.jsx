@@ -34,10 +34,10 @@ export default function Login(){
 
     return ( 
 
-        <div id="banner-content" className="row clearfix">
-        <div id="services" className="scrollto clearfix">
+        <div id="banner-content" className="row">
+        <div id="services" className="clearfix">
 
-        <div className="row no-padding-bottom clearfix">
+        <div className="row ">
 
             {/*<!--Content Left Side-->*/}
             <div className="col-3">

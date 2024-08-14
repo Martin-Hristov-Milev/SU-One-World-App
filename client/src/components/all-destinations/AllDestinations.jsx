@@ -12,8 +12,7 @@ export default function AllDestinations(){
     <div id="banner-content" className="row clearfix">
     <div id="services" className="scrollto clearfix">
     <section id="listing" className="text-center scrollto clearfix ">
-            <div className="row clearfix">
-
+            
                     <div className="section-heading">
                         <h3>OWE WORLD. YOUR CHOICE </h3>
                         <h2 className="section-title">We have the right destination for you</h2>
@@ -24,8 +23,7 @@ export default function AllDestinations(){
                                             key={destination._id} {...destination}/> )
                         : <h2 className="no-destinations">No destinations at the moment</h2>
                     }
-        
-             </div>
+     
      </section>
      </div>
      </div>

@@ -10,9 +10,8 @@ export default function Home (){
             <div className="col-38">
 
                 <div className="section-heading">
-                    <h1>A FREE AND SIMPLE LANDING PAGE</h1>
-                    <h2>Namari is a free landing page template you can use for your projects. It is free to use for your
-                        personal and commercial projects, enjoy!</h2>
+                    <h1>ADVENTURE AWAITS, JUST A CLICK AWAY</h1>
+                    <h2>Welcome to our platform for sharing of destinations and remember: you can always make money, but you can't always make memories!</h2>
                 </div>
 
                 <Link to='/all-destinations' className="button">START DISCOVERING TODAY</Link>
