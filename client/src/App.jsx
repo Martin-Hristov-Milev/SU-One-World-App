@@ -15,6 +15,7 @@ import EditDestination from './components/edit-destination/EditDestination';
 import Profile from './components/profile/Profile';
 import RouteGuard from './common/RouteGuard';
 import Latest from './components/latest/Latest';
+import PageNotFound from './components/page-not-found/PageNotFound';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                   element={<DetailsDestination/>} />
           <Route  path='/register' element={<Register/>} />
           <Route  path='/login' element={<Login/>} />
+          <Route  path='*' element={<PageNotFound/>} />
           
           <Route element={<RouteGuard/>}>
               <Route  path='/logout' element={<Logout/>} />

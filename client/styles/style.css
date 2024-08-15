@@ -526,8 +526,9 @@ h6 {
 }
 
 #banner-content.row {
+    min-height: 800px;
     padding-top: 130px;
-    /* padding-bottom: 100px; */
+   
 }
 
 #banner h1 {
