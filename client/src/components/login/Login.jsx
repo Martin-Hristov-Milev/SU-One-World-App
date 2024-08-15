@@ -43,10 +43,9 @@ export default function Login(){
             <div className="col-3">
                 {/*<!--User Testimonial-->*/}
                 <blockquote className="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua
+                        <q>Not all those who wander are lost.
                         </q>
-                        <footer>— John Doe, Happy Customer</footer>
+                        <footer>— J.R.R. Tolkien —</footer>
                 </blockquote>
                 {/*<!-- End of Testimonial-->*/}
 

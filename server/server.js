@@ -1339,6 +1339,29 @@
     	}
     };
     var seedData = {
+        destinations: {
+            "440be7b9-c218-44b9-87aa-9436e9e760e1": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                location: "Ari Atoll, Maldives",
+                journey: "by sailing boat  ",
+                budget: "1500",
+                imageUrl: "https://samudramaldives.com/wp-content/uploads/ari-atoll-maldives-header.jpg",
+                descriptio: "It was an amazing sailing adventure across the ocean. Seeing all the beautiful places and sea creatures around us.\nAt some point I felt like Captain Jack Sparrow with all the sharks and dengures from the depths.  But in the end it all worked out and the Kraken was served for dinner on the boat.",
+                _createdOn: 1723714244912,
+                _updatedOn: 1723714304537
+            },
+            "c8469398-ea8b-469e-bea2-dd5a57b825b8": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                location: "Mumbai, India",
+                journey: "by plane",
+                budget: "1200",
+                imageUrl: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/12/04/15/mumbai.jpg",
+                description: "Mumbai is the centre of the Mumbai Metropolitan Region, the sixth-most populous metropolitan area in the world with a population of over 23 million...",
+                _createdOn: 1723714467879,
+                
+            },
+        
+        },
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

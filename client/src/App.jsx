@@ -45,11 +45,9 @@ function App() {
               <Route  path='/create' element={<CreateDestination/>}/>
           </Route>         
         </Routes>
-
-        {/* <About/> */}
-     
-      <Footer/>     
+ 
     </div>
+    <Footer/> 
     </AuthContextProvider>
   )
 };

@@ -1,0 +1,17 @@
+.block {
+    max-width: 1245px;
+    margin: 0 auto;
+    
+    bottom: 20px;
+    left: 20px;
+}
+
+
+.block p {
+    
+        font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+        font-size:13px;
+        font-weight:normal;
+        color:#999;
+    
+}

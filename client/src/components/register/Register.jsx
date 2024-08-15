@@ -45,10 +45,9 @@ export default function Register(){
             {/*<!--Content Left Side-->*/}
             <div className="col-3">             
                 <blockquote className="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod    tempor incididunt ut
-                            labore et dolore magna aliqua
+                        <q>If you think adventure is dangerous, try routine, it's lethal
                         </q>
-                        <footer>— John Doe, Happy Customer</footer>
+                        <footer>— Paul Coelho —</footer>
                 </blockquote>           
             </div>
             

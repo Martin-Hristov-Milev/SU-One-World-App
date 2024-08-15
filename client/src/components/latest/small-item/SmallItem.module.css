@@ -2,7 +2,8 @@
 
 .img{
 
-    max-width: 100px;
+    aspect-ratio: 16 / 9;
+    /* max-height: 100px; */
 }
 .block{
     overflow: hidden;
