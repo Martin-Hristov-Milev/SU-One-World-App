@@ -11,7 +11,10 @@ import CreateDestination from './CreateDestination'
 describe( 'CreateDestination has headline', ()=>{
 
     it( 'should have a headline', ()=>{
-        render(<BrowserRouter><CreateDestination /></BrowserRouter>);
+        render(<BrowserRouter>
+                    <CreateDestination />
+                </BrowserRouter>
+            );
 
         const Headline = screen.getByText('CREATE NEW DESTINATION');
         
