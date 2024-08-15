@@ -33,14 +33,14 @@ export default function DetailsDestination(){
         try{
             if(!values.comment){
                 setError('No Content')
-                return 
+                return  // error measage or empty comments validation
             }
             const newComment = await createComment(destinationId, values.comment );
 
             setComments( old => [...old, {...newComment, author: {email} }])
         
         }catch(err){
-            // error measage or empty comments validation
+           
             console.log(err.message)
             setError(err.message)
         }

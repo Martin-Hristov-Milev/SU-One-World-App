@@ -5,18 +5,18 @@ import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom/vitest'
 
 
-import Login from './Login'
-import App from '../../App'
+import Register from './Register'
 
-describe( 'Login', ()=>{
+
+describe( 'Register', ()=>{
 
     it( 'should have headline', ()=>{
-        render(<BrowserRouter><Login /></BrowserRouter>);
+        render(<BrowserRouter><Register /></BrowserRouter>);
 
-        const Headline = screen.getByText('LOGIN');
+        const Headline = screen.getByText('REGISTER');
         
         expect(Headline).toBeVisible();
-
-        screen.debug()
+        
+        
     })
 });

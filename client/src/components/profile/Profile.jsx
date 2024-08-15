@@ -19,7 +19,7 @@ export default function Profile(){
             
 
                     <div className="section-heading">
-                      <h2 className="section-title">Hello {email} nice to have you in the team</h2>
+                      <h2 className="section-title">Hello {email}, nice to have you in the team</h2>
                       <h3>YOUR DESTINATIONS</h3>
                     </div>
 

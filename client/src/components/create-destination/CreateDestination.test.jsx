@@ -5,18 +5,18 @@ import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom/vitest'
 
 
-import Login from './Login'
-import App from '../../App'
+import CreateDestination from './CreateDestination'
 
-describe( 'Login', ()=>{
 
-    it( 'should have headline', ()=>{
-        render(<BrowserRouter><Login /></BrowserRouter>);
+describe( 'CreateDestination has headline', ()=>{
 
-        const Headline = screen.getByText('LOGIN');
+    it( 'should have a headline', ()=>{
+        render(<BrowserRouter><CreateDestination /></BrowserRouter>);
+
+        const Headline = screen.getByText('CREATE NEW DESTINATION');
         
         expect(Headline).toBeVisible();
 
-        screen.debug()
+        
     })
 });

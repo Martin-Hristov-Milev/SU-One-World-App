@@ -3,13 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 
 
-
-
-
 export default function Header (){
 
     const { isAuthenticated, email }= useContext(authContext);
-
 
     return (
     
@@ -18,8 +14,7 @@ export default function Header (){
             <div className="col-1">
 
                   <div id="logo">
-                      <h1> <span  >One World</span> </h1>
-                      
+                      <h1> <span >One World</span> </h1>                    
                   </div>            
                   <aside>                       
                       <ul className="social-icons">
@@ -71,11 +66,9 @@ export default function Header (){
                                       <li>
                                         <Link to="/logout">Logout</Link>
                                       </li>
-
                                       <li style={{color: "white"}}>
                                         <Link to="/profile">your page {email}</Link>
                                       </li> 
-
                                       </>
                                     )                                                 
                                  :  (
@@ -88,8 +81,7 @@ export default function Header (){
                                       </li>
                                     </>
                                     )
-                                }
-                                    
+                                }                            
                     </ul>       
                   </nav>                    
                 </div>

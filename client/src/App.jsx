@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useParams , Link} from 'react-router-dom'
+import { Routes, Route, useParams } from 'react-router-dom'
 import { AuthContextProvider } from './contexts/authContext';
 
 
@@ -22,7 +22,6 @@ function App() {
   
   return (
     
-<BrowserRouter>
     <div id="wrapper">
     <AuthContextProvider>
       
@@ -51,7 +50,7 @@ function App() {
    </AuthContextProvider>
 
    </div>
-   </BrowserRouter>
+  
     
     
   )

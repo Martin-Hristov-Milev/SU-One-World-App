@@ -12,7 +12,7 @@ export default function EditDestination(){
 
     const navigate = useNavigate();
     const {destinationId} = useParams();
-    // const [error , setError]= useState('');
+   
     const [destination, setDestination] = useGetOneDestination(destinationId);
 
     const initialValues = {
@@ -40,8 +40,6 @@ export default function EditDestination(){
         reinitializeForm,
         } = useForm(  destination , submitCallBack);
 
-        // Object.assign(initialValues, destination)
-
     useEffect( ()=>{reinitializeForm()},[destination])
             
            
@@ -53,17 +51,18 @@ export default function EditDestination(){
         <div id="services" className="scrollto clearfix">
         <div className="row no-padding-bottom clearfix">
 
-            {/*<!--Content Left Side-->*/}
+            
             <div className="col-3">              
                 <blockquote className="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod    tempor incididunt ut
-                            labore et dolore magna aliqua
+                        <q>Once a year, go someplace you've never been before.
+
+
                         </q>
-                        <footer>— John Doe, Happy Customer</footer>
+                        <footer>― Dalai Lama ―</footer>
                 </blockquote>
             </div>
             
-            {/*<!--Content of the Middle -->*/}
+     
             <div className="col-3">
                 <div className=" section-heading">
                     <h3>THIS ADVENTURE IS GETTING BETTER </h3>
@@ -75,7 +74,7 @@ export default function EditDestination(){
                 >
                     
                     
-                    <label htmlFor="location">Location</label>
+                    <label htmlFor="location">Location *</label>
                     <input
                         type="text"
                         id="location"
@@ -83,9 +82,10 @@ export default function EditDestination(){
                         value={values.location}
                         onChange={changeHandler}
                         placeholder="Where were you..."
+                        required
                     />
 
-                    <label htmlFor="journey">Journey type</label>
+                    <label htmlFor="journey">Journey type *</label>
                     <input
                         type="text"
                         id="journey"
@@ -93,6 +93,7 @@ export default function EditDestination(){
                         value={values.journey}
                         onChange={changeHandler}
                         placeholder="How did you get there..."
+                        required
                     />
 
 
@@ -108,6 +109,7 @@ export default function EditDestination(){
 
                     <label htmlFor="description">Description</label>
                     <textarea name="description" id="description"
+                        rows="6" cols="21"
                         placeholder="Now the details please..."
                         value={values.description}
                         onChange={changeHandler}
@@ -126,7 +128,7 @@ export default function EditDestination(){
 
                     <input className="button " type="submit" value="UPDATE" />
 
-                    {/* {error && <p style={{ color:'red', margin:'3em 0 3em 0' }}><span> Issue : {error}</span></p> } */}
+                   
                     
                 </form>
             </div>

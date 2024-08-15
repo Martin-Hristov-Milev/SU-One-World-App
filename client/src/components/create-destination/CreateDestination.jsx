@@ -25,6 +25,7 @@ export default function CreateDestination(){
         setError('')
 
         try{
+           
            const result = await create( values );
 
            const { _id: destinationId} = result;
@@ -46,20 +47,20 @@ export default function CreateDestination(){
 
         <div className="row no-padding-bottom clearfix">
 
-            {/*<!--Content Left Side-->*/}
+            
             <div className="col-3">
                
                 <blockquote className="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod    tempor incididunt ut
-                            labore et dolore magna aliqua
+                        <q>Life is either a daring adventure or nothing at all.
+                        
                         </q>
-                        <footer>— John Doe, Happy Customer</footer>
+                        <footer>― Helen Keller— </footer>
                 </blockquote>
                 
 
             </div>
             
-            {/*<!--Content of the Middle -->*/}
+            
             <div className="col-3">
                 <div className=" section-heading">
                     <h3>THE JOURNEY STARTS HERE </h3>
@@ -71,7 +72,7 @@ export default function CreateDestination(){
                 >
                     
                     
-                    <label htmlFor="location">Location</label>
+                    <label htmlFor="location">Location *</label>
                     <input
                         type="text"
                         id="location"
@@ -79,9 +80,10 @@ export default function CreateDestination(){
                         value={values.location}
                         onChange={changeHandler}
                         placeholder="Where were you..."
+                        required
                     />
 
-                    <label htmlFor="journey">Journey type</label>
+                    <label htmlFor="journey">Journey type *</label>
                     <input
                         type="text"
                         id="journey"
@@ -89,6 +91,7 @@ export default function CreateDestination(){
                         value={values.journey}
                         onChange={changeHandler}
                         placeholder="How did you get there..."
+                        required
                     />
 
 
@@ -103,7 +106,9 @@ export default function CreateDestination(){
                     />
 
                     <label htmlFor="description">Description</label>
-                    <textarea name="description" id="description"
+                    <textarea 
+                        name="description" id="description"
+                        rows="6" cols="21"
                         placeholder="Now the details please..."
                         value={values.description}
                         onChange={changeHandler}

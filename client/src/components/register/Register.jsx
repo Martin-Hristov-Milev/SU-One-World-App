@@ -42,7 +42,7 @@ export default function Register(){
      <div id="services" className=" clearfix">
         <div className="row  ">
 
-            {/*<!--Content Left Side-->*/}
+            
             <div className="col-3">             
                 <blockquote className="testimonial text-right bigtest">
                         <q>If you think adventure is dangerous, try routine, it's lethal
@@ -51,7 +51,7 @@ export default function Register(){
                 </blockquote>           
             </div>
             
-            {/*<!--Content of the Midle Side-->*/}
+            
             <div className="col-3">
                 <div className=" section-heading">
                     <h3>THE JOURNEY STARTS HERE </h3>
@@ -65,6 +65,7 @@ export default function Register(){
                                 value={values.email} 
                                 onChange={changeHandler} 
                                 placeholder="my_mail@email.com"
+                                required
                                 />
 
                         <label htmlFor="pass">Password:</label>

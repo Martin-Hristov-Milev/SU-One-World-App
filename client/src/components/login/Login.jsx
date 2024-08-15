@@ -39,19 +39,19 @@ export default function Login(){
 
         <div className="row ">
 
-            {/*<!--Content Left Side-->*/}
+            
             <div className="col-3">
-                {/*<!--User Testimonial-->*/}
+                
                 <blockquote className="testimonial text-right bigtest">
                         <q>Not all those who wander are lost.
                         </q>
                         <footer>— J.R.R. Tolkien —</footer>
                 </blockquote>
-                {/*<!-- End of Testimonial-->*/}
+                
 
             </div>
             
-            {/*<!--Content of the Midle Side-->*/}
+            
             <div className="col-3">
                 <div className=" section-heading">
                     <h3>WELCOME BACK</h3>
@@ -67,6 +67,7 @@ export default function Login(){
                                     placeholder="my-email@gmail.com"
                                     value={values.email} 
                                     onChange={changeHandler}
+                                    required
                                     />
 
                             <label htmlFor="login-password">Password:</label>
