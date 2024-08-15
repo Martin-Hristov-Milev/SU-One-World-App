@@ -1346,7 +1346,7 @@
                 journey: "by sailing boat  ",
                 budget: "1500",
                 imageUrl: "https://samudramaldives.com/wp-content/uploads/ari-atoll-maldives-header.jpg",
-                descriptio: "It was an amazing sailing adventure across the ocean. Seeing all the beautiful places and sea creatures around us.\nAt some point I felt like Captain Jack Sparrow with all the sharks and dengures from the depths.  But in the end it all worked out and the Kraken was served for dinner on the boat.",
+                description: "It was an amazing sailing adventure across the ocean. Seeing all the beautiful places and sea creatures around us.\nAt some point I felt like Captain Jack Sparrow with all the sharks and dengures from the depths.  But in the end it all worked out and the Kraken was served for dinner on the boat.",
                 _createdOn: 1723714244912,
                 _updatedOn: 1723714304537
             },
