@@ -1,8 +1,6 @@
 import ItemDestination from "./Item-destination/ItemDestination"
 import {useGetAllDestinations} from "../../hooks/useDestinations"
 
-
-
 export default function AllDestinations(){
 
     const [destinations, setDestinations] = useGetAllDestinations();

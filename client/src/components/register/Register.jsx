@@ -5,9 +5,6 @@ import { useState } from "react"
 import { useRegister } from '../../hooks/useAuth';
 
 
-
-
-
 export default function Register(){
 
     const [error , setError]= useState('');
@@ -15,7 +12,6 @@ export default function Register(){
     const navigate = useNavigate();
 
     const initialValues = { email:'', password: '', ['confirm-password']:''};
-
 
     const submitCallBack = async(values) =>{ 
         setError('')
@@ -40,9 +36,8 @@ export default function Register(){
 
     <div id="banner-content" className="row ">
      <div id="services" className=" clearfix">
-        <div className="row  ">
-
-            
+        <div className="row ">
+          
             <div className="col-3">             
                 <blockquote className="testimonial text-right bigtest">
                         <q>If you think adventure is dangerous, try routine, it's lethal
@@ -50,8 +45,7 @@ export default function Register(){
                         <footer>— Paul Coelho —</footer>
                 </blockquote>           
             </div>
-            
-            
+      
             <div className="col-3">
                 <div className=" section-heading">
                     <h3>THE JOURNEY STARTS HERE </h3>
@@ -86,11 +80,9 @@ export default function Register(){
                         {error && <p style={{ color:'red', margin:'3em 0 3em 0',  }}><span>{error}</span></p> }
                                              
                  </form>
-
                 <p className="section-subtitle">
                     <span>If you already have profile click <Link to="/login">here</Link></span> 
-                </p>
-               
+                </p>             
             </div>
         </div>
      </div>

@@ -6,8 +6,7 @@ import { authContext } from "../contexts/authContext";
 
 
 export function useLogin ( ){
-
-    const {changeAuthState} = useContext(authContext);
+     const {changeAuthState} = useContext(authContext);
 
     const loginHandler = async ( email, password ) => {
 
@@ -20,8 +19,7 @@ export function useLogin ( ){
     return loginHandler
 };
 
-export function useRegister (){
-    
+export function useRegister (){  
     const {changeAuthState} = useContext(authContext);
 
     const registerHandler = async (email, password ) => {
@@ -33,16 +31,14 @@ export function useRegister (){
     };
 
     return registerHandler
-
 };
 
 export function useLogout (){ 
     const {logout: localLogaut} = useContext(authContext)
 
-            const logoutHandler = async () => {
-
-                await logout();
-                localLogaut ()
-            };
-            return logoutHandler
+         const logoutHandler = async () => {
+             await logout();
+             localLogaut ()
+         };
+         return logoutHandler
 };

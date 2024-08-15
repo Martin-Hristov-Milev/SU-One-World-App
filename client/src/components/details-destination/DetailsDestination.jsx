@@ -8,8 +8,6 @@ import { remove } from "../../services-api/destination-API";
 import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import { useForm } from "../../hooks/useForm";
 
-
-
 const initialValues = { comment: ''};
 
 export default function DetailsDestination(){
@@ -33,7 +31,7 @@ export default function DetailsDestination(){
         try{
             if(!values.comment){
                 setError('No Content')
-                return  // error measage or empty comments validation
+                return  
             }
             const newComment = await createComment(destinationId, values.comment );
 
@@ -47,7 +45,6 @@ export default function DetailsDestination(){
      }; 
 
     const {values, changeHandler, submitHandler,} = useForm(initialValues, submitCallBack);
-
 
 // ------------------delete------------------
 
@@ -68,19 +65,14 @@ export default function DetailsDestination(){
 
     <div id="banner-content" className="row clearfix">
         <div id="services" className="scrollto clearfix">
-
             <div className="row no-padding-bottom clearfix"> 
-
-                {/*<!--Content Left Side-->*/}
                 <div className="col-3">
                     <blockquote className="testimonial text-right bigtest">
-                            <footer> Description:  </footer>
-                            <q>{destination.description}</q>
+                         <footer> Description: </footer>
+                        <q>{destination.description}</q>
                             
                     </blockquote>
                 </div>
-                
-                {/*<!--Content of the Midle Side-->*/}
                 <div className="col-3">
                     <div className="section-heading">
                         <h3 className={styles.journey}>Type of journey: {destination.journey}</h3>
@@ -88,10 +80,7 @@ export default function DetailsDestination(){
                         
                     </div>
                     <p>Budget in USD : {destination.budget}</p>
-                    
-                    <p></p>
-                    
-                    
+                 
                     {isOwner && (
                         <>
                         <Link to={ `/all-destinations/${destinationId}/edit` } className="button"
@@ -103,11 +92,9 @@ export default function DetailsDestination(){
                         >DELETE</Link>
                         </>
                     )}
-                   
-
                     <div >
-                    <h4>COMMENTS AND QUESTIONS:</h4>
-                         <ul className={styles.comments}> 
+                        <h4>COMMENTS AND QUESTIONS:</h4>
+                        <ul className={styles.comments}> 
                              {comments.map( ({_id, author, text}) => (
 
                                  <li key={_id} className="comment" >
@@ -115,10 +102,10 @@ export default function DetailsDestination(){
                                  </li>
                                 ) 
                               )}
-                         </ul>
-                            {comments.length === 0 && (
+                        </ul>
+                        {comments.length === 0 && (
                                 <p >No comments.</p>
-                                )}
+                        )}
                     </div> 
                     <article >
                         <label>Add new comment:</label>
@@ -143,19 +130,13 @@ export default function DetailsDestination(){
                                value="Add Comment"/>
                         </form>
                     </article>
-
-                </div>
-                {/*<!--End Content Right Side-->*/}
-
+                </div>            
                 <div className="col-3">
                     <img className={styles.img}src={destination.imageUrl} alt="Image"/>
                 </div>
-
             </div>
         </div>
     </div>
     )
-
-
 }
       

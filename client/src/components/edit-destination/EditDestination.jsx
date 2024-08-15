@@ -41,17 +41,12 @@ export default function EditDestination(){
         } = useForm(  destination , submitCallBack);
 
     useEffect( ()=>{reinitializeForm()},[destination])
-            
-           
-
-  
-
+ 
     return (
         <div id="banner-content" className="row clearfix">
         <div id="services" className="scrollto clearfix">
         <div className="row no-padding-bottom clearfix">
-
-            
+          
             <div className="col-3">              
                 <blockquote className="testimonial text-right bigtest">
                         <q>Once a year, go someplace you've never been before.
@@ -61,8 +56,7 @@ export default function EditDestination(){
                         <footer>― Dalai Lama ―</footer>
                 </blockquote>
             </div>
-            
-     
+   
             <div className="col-3">
                 <div className=" section-heading">
                     <h3>THIS ADVENTURE IS GETTING BETTER </h3>
@@ -70,10 +64,8 @@ export default function EditDestination(){
                 </div>
 
                 <form id="create" 
-                 onSubmit={submitHandler}
-                >
-                    
-                    
+                 onSubmit={submitHandler}>
+
                     <label htmlFor="location">Location *</label>
                     <input
                         type="text"
@@ -84,7 +76,6 @@ export default function EditDestination(){
                         placeholder="Where were you..."
                         required
                     />
-
                     <label htmlFor="journey">Journey type *</label>
                     <input
                         type="text"
@@ -95,8 +86,6 @@ export default function EditDestination(){
                         placeholder="How did you get there..."
                         required
                     />
-
-
                     <label htmlFor="imageUrl">Image:</label>
                     <input
                         type="text"
@@ -125,11 +114,8 @@ export default function EditDestination(){
                         min="0"
                         placeholder="How much did you spend.."
                     />
-
                     <input className="button " type="submit" value="UPDATE" />
-
-                   
-                    
+         
                 </form>
             </div>
      </div>

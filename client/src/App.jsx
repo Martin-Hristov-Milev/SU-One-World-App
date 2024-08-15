@@ -48,11 +48,7 @@ function App() {
       </Routes>
    <Footer/> 
    </AuthContextProvider>
-
    </div>
-  
-    
-    
   )
 };
 

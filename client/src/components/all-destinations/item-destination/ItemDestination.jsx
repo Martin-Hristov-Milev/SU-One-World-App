@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import  styles  from './ItemDestination.module.css'
 
-
-
 export default function ItemDestination( {     
                         location,
                         journey,
@@ -16,15 +14,13 @@ export default function ItemDestination( {
                 <div className="list-block-content">
                             <div className={styles.img}>
                                 <img src={imageUrl} alt="Destination Image"/>
-                            {/* <div className="list"></div> */}
                             </div>
                             <h3>{location}</h3>
                             <p> Journey: {journey}</p>
                             <p> Estimated budget: {budget}$ </p>
                                                      
                             <Link to={`/all-destinations/${_id}/details`}  className="button">DETAILS</Link>
-                 </div>
-          </div>
-
+                </div>
+        </div>
     )
 }

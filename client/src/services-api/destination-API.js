@@ -11,7 +11,6 @@ export const create = async (destinationData) => {
 export const getAll = async ()=> {
 
     const result = await request.get(baseUrl);
-
     return Object.values(result) 
 };
 
@@ -35,22 +34,12 @@ export const remove = async (destinationId) => {
 
 export const getLatest = async () => {
 
-    
-
     const response = await request.get(`${baseUrl}?sortBy=_createdOn desc&offset=0&pageSize=3`);
-   
-    return response
-
-    
+    return response 
 };
 export const getByOwner = async (ownerId) => {
 
     const params = encodeURIComponent(`="${ownerId}"`)
-    
-
     const response = await request.get(`${baseUrl}?where=_ownerId${params}`);
-    
-    return response
-
-    
+    return response   
 };

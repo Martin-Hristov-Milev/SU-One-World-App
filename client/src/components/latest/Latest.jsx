@@ -1,12 +1,9 @@
 
-
 import SmallItem from "./small-item/SmallItem"
 import { getLatestDestinations } from "../../hooks/useDestinations"
 
-
  export default function Latest(){
     const latest = getLatestDestinations()
-
 
     return (
 

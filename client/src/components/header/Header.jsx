@@ -2,16 +2,14 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 
-
 export default function Header (){
 
     const { isAuthenticated, email }= useContext(authContext);
 
     return (
-    
-            <div id="header" className="nav-collapse">
-            <div className="row clearfix">
-            <div className="col-1">
+          <div id="header" className="nav-collapse">
+          <div className="row clearfix">
+          <div className="col-1">
 
                   <div id="logo">
                       <h1> <span >One World</span> </h1>                    
@@ -45,48 +43,43 @@ export default function Header (){
                                 </li>
                       </ul>     
                   </aside>
-
                   <nav id="nav-main">
                     <ul>
-                                <li>
-                                    <Link to='/'>Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/latest">Latest</Link>
-                                </li>
-                                <li>
-                                    <Link to="/all-destinations">All Destinations</Link>
-                                </li>
+                        <li>
+                            <Link to='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/latest">Latest</Link>
+                        </li>
+                        <li>
+                            <Link to="/all-destinations">All Destinations</Link>
+                        </li>
                                 
-                                { isAuthenticated 
-                                 ?  (<>
-                                       <li>
-                                        <Link to="/create">Create</Link>
-                                      </li>
-                                      <li>
-                                        <Link to="/logout">Logout</Link>
-                                      </li>
-                                      <li style={{color: "white"}}>
-                                        <Link to="/profile">your page {email}</Link>
-                                      </li> 
-                                      </>
-                                    )                                                 
-                                 :  (
-                                    <>
-                                      <li>                              
-                                          <Link to="/register">Register</Link>
-                                      </li>
-                                      <li>
-                                          <Link to="/login">Login</Link>
-                                      </li>
-                                    </>
-                                    )
-                                }                            
+                          { isAuthenticated 
+                           ? (<>
+                                <li>
+                                  <Link to="/create">Create</Link>
+                                </li>
+                                <li>
+                                  <Link to="/logout">Logout</Link>
+                                </li>
+                                <li>
+                                  <Link to="/profile">your page {email}</Link>
+                                </li> 
+                              </>)                                                                                   
+                           :  (<>
+                                <li>                              
+                                    <Link to="/register">Register</Link>
+                                </li>
+                                <li>
+                                    <Link to="/login">Login</Link>
+                                </li>
+                              </>)
+                         }                            
                     </ul>       
                   </nav>                    
-                </div>
-                </div>
-            </div>
-     
+          </div>
+          </div>
+          </div>
     )
-}
+};

@@ -6,7 +6,6 @@ export function useCreateComment(){
     const createHandler = async(destinationId, comment) => await create(destinationId, comment); 
 
     return createHandler
-
 };
 
 export function useGetAllComments(destinationId){
@@ -20,7 +19,5 @@ export function useGetAllComments(destinationId){
         })();
     },[destinationId]);
 
-    return [comments, setComments]
-    
-        
-}
+    return [comments, setComments]      
+};

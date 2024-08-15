@@ -3,32 +3,23 @@ import styles from './SmallItem.module.css'
 
 
 
-export default function LatestItem( {     
-                        location,
-                        journey,
-                        budget,
-                        imageUrl ,
-                        _id,
-                    }   
-){
+export default function LatestItem( 
+    {     
+      location,                
+      imageUrl ,                 
+      _id,                                    
+    }
+  ){
     return(
         <div className="list-block col-3" >
-                <div  className="list-block-content">
-
-                        <Link to={`/all-destinations/${_id}/details`} className={styles.block}>
-                            <div className="">
-                            
-                                <img className={styles.img}src={imageUrl} alt="Destination Image"/>
-                            {/* <div className="list"></div> */}
-                            </div>
-                            <h3>{location}</h3>
-                        
-                            </Link>
-                                                     
-                            {/* <p>{budget}$</p> */}
-                            {/* <Link to={`/all-destinations/${_id}/details`}  className="button">DETAILS</Link> */}
-                 </div>
-          </div>
-
+            <div  className="list-block-content">
+                    <Link to={`/all-destinations/${_id}/details`} className={styles.block}>
+                         <div className="">
+                             <img className={styles.img}src={imageUrl} alt="Destination Image"/>
+                         </div>
+                        <h3>{location}</h3>
+                    </Link>    
+             </div>
+        </div>
     )
-}
+};

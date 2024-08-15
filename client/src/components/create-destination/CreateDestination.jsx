@@ -5,8 +5,6 @@ import { useForm } from '../../hooks/useForm';
 import { create } from '../../services-api/destination-API'
 
 
-
-
 export default function CreateDestination(){
 
     const navigate = useNavigate();
