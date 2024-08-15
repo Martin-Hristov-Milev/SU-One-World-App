@@ -12,15 +12,14 @@ export default function Header (){
 
 
     return (
-      
-        
+    
             <div id="header" className="nav-collapse">
             <div className="row clearfix">
             <div className="col-1">
 
                   <div id="logo">
                       <h1> <span  >One World</span> </h1>
-                      {/* create link !! */}
+                      
                   </div>            
                   <aside>                       
                       <ul className="social-icons">
@@ -90,16 +89,10 @@ export default function Header (){
                                     </>
                                     )
                                 }
-
-                                
-
-                                
-                               
-                    </ul>
-          
-                  </nav>
-                       
-                    </div>
+                                    
+                    </ul>       
+                  </nav>                    
+                </div>
                 </div>
             </div>
      

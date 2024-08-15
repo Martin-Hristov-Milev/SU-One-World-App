@@ -4,9 +4,7 @@ export default function Home (){
 
     return (
         <div id="banner-content" className="row clearfix">
-             {/* <!--Banner Content--> */}
-            
-
+      
             <div className="col-38">
 
                 <div className="section-heading">

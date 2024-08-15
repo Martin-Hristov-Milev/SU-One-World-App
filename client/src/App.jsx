@@ -1,11 +1,10 @@
-import { Routes, Route, useParams } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useParams , Link} from 'react-router-dom'
 import { AuthContextProvider } from './contexts/authContext';
 
 
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Home from './components/home/Home'
-import About from "./components/about/About";
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import AllDestinations from './components/all-destinations/AllDestinations';
@@ -18,16 +17,17 @@ import RouteGuard from './common/RouteGuard';
 import Latest from './components/latest/Latest';
 
 
-
-
 function App() {
   
   return (
-    <AuthContextProvider>
+    
+<BrowserRouter>
     <div id="wrapper">
+    <AuthContextProvider>
       
       <Header/>
-        <Routes>
+       <Routes>
+          
           <Route  path='/' element={<Home/>} />
           <Route  path='/latest' element={<Latest/>} />
           <Route  path='/all-destinations' 
@@ -44,11 +44,14 @@ function App() {
                       element={<EditDestination/>} />
               <Route  path='/create' element={<CreateDestination/>}/>
           </Route>         
-        </Routes>
- 
-    </div>
-    <Footer/> 
-    </AuthContextProvider>
+      </Routes>
+   <Footer/> 
+   </AuthContextProvider>
+
+   </div>
+   </BrowserRouter>
+    
+    
   )
 };
 
